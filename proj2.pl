@@ -13,6 +13,8 @@ jobs_ok([[A,B,C,D], [E,F,G,H], [I,J,K,L], [M,N,O,P]], [Emp|T]) :-
 		 [M,N,O,P]], T).
 jobs_ok(_Shifts, []).
 
+% shifts_ok(+Item, +L)
+% Checks for any duplicates in L.
 shifts_ok(_, []).
 shifts_ok(Item, [H|T]) :-
 	Item \== H,
