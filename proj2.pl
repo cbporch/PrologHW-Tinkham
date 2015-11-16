@@ -20,8 +20,8 @@ jobs_ok(_Shifts, []).
 no_dup(_, []).
 no_dup(Item, [H|T]) :-
 	Item \== H,
-	shifts_ok(Item, T),
-	shifts_ok(H, T).
+	no_dup(Item, T),
+	no_dup(H, T).
 	
 % employee_ok(+Employee, +Shifts)
 % Checks that the current employee is in
